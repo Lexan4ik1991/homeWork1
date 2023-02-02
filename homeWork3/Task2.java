@@ -13,10 +13,8 @@ public class Task2 {
 
 
         fillArray();
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
+
     }
 
     public static void fillArray() {
@@ -28,7 +26,7 @@ public class Task2 {
             myArray[i] = random.nextInt(10);
 
         }
-<<<<<<< HEAD
+
         System.out.println(Arrays.toString(myArray));
 
 
@@ -36,7 +34,7 @@ public class Task2 {
             aList.add(i, (int) (Math.random() * 10 + 1));
         }
         System.out.println("Unsorted ArrayList " + aList);
-=======
+
             System.out.println(Arrays.toString(myArray));
 
             for (int i = 0; i < myArray.length; i++) {
@@ -45,14 +43,14 @@ public class Task2 {
 
             }
             System.out.println("Unsorted ArrayList "+aList);
->>>>>>> origin/main
+
         Collections.sort(aList);
         System.out.println("Sorted ArrayList " + aList);
         int max = aList.get(aList.size() - 1);
         int min = aList.get(0);
         System.out.println(min);
         System.out.println(max);
-<<<<<<< HEAD
+
         double sum = 0;
         double result = 0;
         for (int i = 0; i < aList.size(); i++) {
@@ -63,34 +61,6 @@ public class Task2 {
         System.out.println(result);
     }
 }
-
-
-
-
-
-
-
-
-=======
-        private static double getAverage(); {
-            long sum = 0;
-            for (int i: aList) {
-                sum += i;
-            }
-            return aList.size() > 0 ? (double) sum / aList.size() : 0;
-        double avg = getAverage(aList);
-        System.out.println(avg);
-
-
-
-    }
-
-
-}
->>>>>>> origin/main
-
-
-
 
 
 
