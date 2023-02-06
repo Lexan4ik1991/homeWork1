@@ -14,9 +14,7 @@ public class Task2 {
 
         fillArray();
 
-
     }
-
     public static void fillArray() {
 
         Random rnd = new Random();
@@ -26,20 +24,23 @@ public class Task2 {
             aList.add(num);
         }
         System.out.println("Unsorted ArrayList " + aList);
-        IntSummaryStatistics intSummaryStatistics
-                = new IntSummaryStatistics();
-        Iterator<Integer> iterator = aList.listIterator();
-        while (iterator.hasNext()) {
-            intSummaryStatistics.accept(iterator.next());
+
+            IntSummaryStatistics intSummaryStatistics
+                    = new IntSummaryStatistics();
+            Iterator<Integer> iterator = aList.listIterator();
+            while (iterator.hasNext()) {
+                intSummaryStatistics.accept(iterator.next());
+            }
+            System.out.println("The maximum of values is "
+                    + intSummaryStatistics.getMax());
+            System.out.println("The minimum of values is "
+                    + intSummaryStatistics.getMin());
+            System.out.println("The average of values is "
+                    + intSummaryStatistics.getAverage());
         }
-        System.out.println("The maximum of values is "
-                + intSummaryStatistics.getMax());
-        System.out.println("The minimum of values is "
-                + intSummaryStatistics.getMin());
-        System.out.println("The average of values is "
-                + intSummaryStatistics.getAverage());
     }
-}
+
+
 
 
 
