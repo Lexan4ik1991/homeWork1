@@ -19,13 +19,9 @@ public class Task1 {
             aList.add(num);
         }
         System.out.println(aList);
-        for (Iterator<Integer> iterator = aList.iterator(); iterator.hasNext(); ) {
-                Integer number = iterator.next();
-                if (number % 2 == 0) {
-                    System.out.println(number);
-                    iterator.remove();
-                }
-            }
+        aList.removeIf(number -> number % 2 == 0);
+
+        System.out.println(aList);
 
         }
     }
