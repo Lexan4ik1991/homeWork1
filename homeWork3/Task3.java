@@ -13,7 +13,7 @@ public class Task3 {
 
     public static void ex2() {
         List<String> planets = new ArrayList<>();
-        HashMap<String, Integer> planetCount = new HashMap<>();
+        Map<String, Integer> planetCount = new HashMap<>();
         Random rand = new Random();
 
         String[] solarSystemPlanets = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
@@ -39,11 +39,8 @@ public class Task3 {
         for (String planet : planetCount.keySet()) {
             System.out.printf("%s\t%s%n", planet, planetCount.get(planet));
         }
-        HashSet<String> hashSet = new HashSet<>();
-        planets.forEach(value -> {hashSet.add(value);
-        });
-        for (String value : hashSet) {
-            System.out.printf("%s%n",value);
-        }
+        Set<String> uniquePlanets = new HashSet<>(planets);
+        System.out.println(uniquePlanets);
+
     }
 }
