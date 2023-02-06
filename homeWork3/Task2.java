@@ -19,48 +19,28 @@ public class Task2 {
 
     public static void fillArray() {
 
-        List<Integer> aList = new ArrayList<>();
-        int[] myArray = new int[10];
-        Random random = new Random();
-        for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = random.nextInt(10);
-
-        }
-
-        System.out.println(Arrays.toString(myArray));
-
-
-        for (int i = 0; i < myArray.length; i++) {
-            aList.add(i, (int) (Math.random() * 10 + 1));
+        Random rnd = new Random();
+        ArrayList<Integer> aList = new ArrayList<Integer>();
+        for (int i = 0; i < 10; i++) {
+            int num = rnd.nextInt(-10, 10);
+            aList.add(num);
         }
         System.out.println("Unsorted ArrayList " + aList);
-
-            System.out.println(Arrays.toString(myArray));
-
-            for (int i = 0; i < myArray.length; i++) {
-                aList.add(i, (int) (Math.random() * 10 + 1));
-
-
-            }
-            System.out.println("Unsorted ArrayList "+aList);
-
-        Collections.sort(aList);
-        System.out.println("Sorted ArrayList " + aList);
-        int max = aList.get(aList.size() - 1);
-        int min = aList.get(0);
-        System.out.println(min);
-        System.out.println(max);
-
-        double sum = 0;
-        double result = 0;
-        for (int i = 0; i < aList.size(); i++) {
-            sum += aList.get(i);
-            result = sum / aList.size();
-
+        IntSummaryStatistics intSummaryStatistics
+                = new IntSummaryStatistics();
+        Iterator<Integer> iterator = aList.listIterator();
+        while (iterator.hasNext()) {
+            intSummaryStatistics.accept(iterator.next());
         }
-        System.out.println(result);
+        System.out.println("The maximum of values is "
+                + intSummaryStatistics.getMax());
+        System.out.println("The minimum of values is "
+                + intSummaryStatistics.getMin());
+        System.out.println("The average of values is "
+                + intSummaryStatistics.getAverage());
     }
 }
+
 
 
 
