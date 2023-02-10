@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 
 //Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее арифметическое из этого списка.
