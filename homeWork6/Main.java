@@ -27,7 +27,7 @@ public class Main {
         System.out.println("1 - Сортировка по ОЗУ");
         System.out.println("2 - Сортировка по SSD");
         System.out.println("3 - Сортировка по цвету");
-        System.out.println("4 - Режим разработчика");
+        //System.out.println("4 - Режим разработчика");
 
         Scanner sc = new Scanner(System.in);
         Integer choice = sc.nextInt();
@@ -77,35 +77,35 @@ public class Main {
                         break;
 
                     }
-                }else if (choice == 4) {
-                    System.out.println("Вы в режиме разработчика,введите номер пункта");
-
-                    System.out.println("Введите id");
-                    Integer idChoice = sc.nextInt();
-                    laptop.setId(idChoice);
-
-                    System.out.println("Введите производителя");
-                    String manChoice = sc.next();
-                    laptop.setManufacturer(manChoice);
-
-                    System.out.println("Введите модель");
-                    String modelChoice = sc.next();
-                    laptop.setModel(modelChoice);
-
-                    System.out.println("Введите цвет");
-                    String colorChoice = sc.next();
-                    laptop.setColor(colorChoice);
-
-                    System.out.println("Введите значение RAM");
-                    Integer ramChoice = sc.nextInt();
-                    laptop.setRAM(ramChoice);
-
-                    System.out.println("Введите значение SSD");
-                    Integer ssdChoice = sc.nextInt();
-                    laptop.setSSD(ssdChoice);
-                    System.out.println(laptop.toString());
-                    laptopList.add(laptop);
-
+//                }else if (choice == 4) {
+//                    System.out.println("Вы в режиме разработчика,введите номер пункта");
+//
+//                    System.out.println("Введите id");
+//                    Integer idChoice = sc.nextInt();
+//                    laptop.setId(idChoice);
+//
+//                    System.out.println("Введите производителя");
+//                    String manChoice = sc.next();
+//                    laptop.setManufacturer(manChoice);
+//
+//                    System.out.println("Введите модель");
+//                    String modelChoice = sc.next();
+//                    laptop.setModel(modelChoice);
+//
+//                    System.out.println("Введите цвет");
+//                    String colorChoice = sc.next();
+//                    laptop.setColor(colorChoice);
+//
+//                    System.out.println("Введите значение RAM");
+//                    Integer ramChoice = sc.nextInt();
+//                    laptop.setRAM(ramChoice);
+//
+//                    System.out.println("Введите значение SSD");
+//                    Integer ssdChoice = sc.nextInt();
+//                    laptop.setSSD(ssdChoice);
+//                    System.out.println(laptop.toString());
+//                    laptopList.add(laptop);
+//
                 }
             } catch (Exception e) {
                 System.out.println("Ошибка! ");
